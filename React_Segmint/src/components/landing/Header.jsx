@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { navLinks } from "../../data/landingData";
 
 export default function Header() {
@@ -52,25 +53,29 @@ export default function Header() {
 
         {/* Header Right Actions */}
         <div className="flex items-center gap-space-md">
-          <a
+          <Link
             className="hidden sm:inline-block font-body-medium text-body-medium text-on-surface-variant hover:text-on-surface px-space-sm py-2 transition-colors"
             data-path="login"
-            href="#login"
+            to="/dashboard"
           >
             Log in
-          </a>
-          <a
+          </Link>
+          <Link
             className="inline-flex items-center justify-center font-body-medium text-body-medium px-4 py-2 rounded-lg bg-primary-container text-on-primary font-medium hover:bg-primary transition-colors shadow-sm"
             data-path="pricing"
-            href="#pricing"
+            to="/dashboard"
           >
-            Get started
-          </a>
-          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1">
+            Go to App
+          </Link>
+          <Link
+            to="/profile"
+            className="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 hover:opacity-90 transition-opacity"
+            title="Account Profile"
+          >
             <span className="material-symbols-outlined text-on-primary text-[18px]">
               person
             </span>
-          </div>
+          </Link>
 
           {/* Mobile Hamburger Button */}
           <button

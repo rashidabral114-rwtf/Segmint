@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function UserProfilePopover({ isOpen, onClose }) {
   const [isPublic, setIsPublic] = useState(true);
@@ -128,8 +129,9 @@ export default function UserProfilePopover({ isOpen, onClose }) {
 
       {/* Action Links */}
       <div className="pt-3 flex flex-col gap-1">
-        <a
-          href="#preferences"
+        <Link
+          to="/profile"
+          onClick={onClose}
           className="flex items-center justify-between px-2 py-1.5 rounded-lg text-on-surface hover:bg-surface-container hover:text-primary transition-colors text-xs font-body-base"
         >
           <span className="flex items-center gap-2">
@@ -141,9 +143,10 @@ export default function UserProfilePopover({ isOpen, onClose }) {
           <span className="material-symbols-outlined text-[14px] text-outline-variant">
             chevron_right
           </span>
-        </a>
-        <a
-          href="#api-keys"
+        </Link>
+        <Link
+          to="/settings"
+          onClick={onClose}
           className="flex items-center justify-between px-2 py-1.5 rounded-lg text-on-surface hover:bg-surface-container hover:text-primary transition-colors text-xs font-body-base"
         >
           <span className="flex items-center gap-2">
@@ -155,16 +158,20 @@ export default function UserProfilePopover({ isOpen, onClose }) {
           <span className="material-symbols-outlined text-[14px] text-outline-variant">
             chevron_right
           </span>
-        </a>
-        <a
-          href="#signout"
-          className="flex items-center justify-between px-2 py-1.5 rounded-lg text-error hover:bg-error-container/20 transition-colors text-xs font-body-base"
+        </Link>
+        <button
+          type="button"
+          onClick={() => {
+            onClose();
+            alert("Signed out of session.");
+          }}
+          className="flex items-center justify-between px-2 py-1.5 rounded-lg text-error hover:bg-error-container/20 transition-colors text-xs font-body-base text-left w-full"
         >
           <span className="flex items-center gap-2">
             <span className="material-symbols-outlined text-[16px]">logout</span>
             Sign Out
           </span>
-        </a>
+        </button>
       </div>
     </div>
   );

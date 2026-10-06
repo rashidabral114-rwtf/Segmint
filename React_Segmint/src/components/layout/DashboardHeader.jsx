@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function DashboardHeader({ onToggleMobileSidebar, actionLabel = "Export Data", onActionClick }) {
   const [notificationsOpen, setNotificationsOpen] = useState(false);
@@ -113,11 +114,15 @@ export default function DashboardHeader({ onToggleMobileSidebar, actionLabel = "
         </button>
 
         {/* User Profile Avatar */}
-        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 cursor-pointer">
+        <Link
+          to="/profile"
+          className="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 cursor-pointer hover:opacity-90 transition-opacity"
+          title="User Profile & Account"
+        >
           <span className="material-symbols-outlined text-on-primary text-[18px]">
             person
           </span>
-        </div>
+        </Link>
       </div>
     </header>
   );

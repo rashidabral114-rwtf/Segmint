@@ -181,3 +181,160 @@ export const cliSnippets = [
   { label: "JavaScript / TypeScript SDK", command: "npm install @segmint/sdk" },
   { label: "Python Client Library", command: "pip install segmint-python" },
 ];
+
+export const docModules = [
+  {
+    id: "MODULE_01",
+    icon: "flag",
+    title: "Getting Started & Architecture",
+    description: "Foundations of canonical identity resolution, distributed indexing, and core pipeline mechanics.",
+    articleCount: 14,
+    articles: [
+      { title: "Platform Quickstart: Ingesting your first 10k profiles", readTime: "4 min" },
+      { title: "Canonical Identity Graph & Entity Resolution", readTime: "6 min" },
+      { title: "Core Terminology: Centroids, Inertia, Ensembles", readTime: "3 min" },
+    ],
+  },
+  {
+    id: "MODULE_02",
+    icon: "database",
+    title: "Ingestion & Warehouses",
+    description: "Direct lakehouse adapters, Debezium change data capture, schema mutation governance, and batch loads.",
+    articleCount: 22,
+    articles: [
+      { title: "Connecting Snowflake, BigQuery & Databricks", readTime: "5 min" },
+      { title: "Real-Time Telemetry Streaming via CDC & Kafka", readTime: "7 min" },
+      { title: "DLQ Remediation & Schema Strict Enforcing", readTime: "4 min" },
+    ],
+  },
+  {
+    id: "MODULE_03",
+    icon: "hub",
+    title: "Clustering & ML Engine",
+    description: "Mathematical tuning of iterative centroid convergence, dimensional scalar transforms, and automated drift.",
+    articleCount: 19,
+    articles: [
+      { title: "K-Means Hyperparameter Tuning & Silhouette", readTime: "8 min" },
+      { title: "Z-Score Normalization vs MinMax Scalers", readTime: "5 min" },
+      { title: "Automated Recalibration & Drift Thresholds", readTime: "6 min" },
+    ],
+  },
+  {
+    id: "MODULE_04",
+    icon: "filter_alt",
+    title: "Segment Rules & Query Engine",
+    description: "Constructing multi-tier boolean logic, time-decay coefficients, and historical back-populating cohort gates.",
+    articleCount: 17,
+    articles: [
+      { title: "Building Composite Rules with Nested AND/OR", readTime: "5 min" },
+      { title: "Tracking Behavioral Decay & Historical Windows", readTime: "4 min" },
+      { title: "Segment Membership Audit Logs & Versioning", readTime: "3 min" },
+    ],
+  },
+  {
+    id: "MODULE_05",
+    icon: "ios_share",
+    title: "Automated Exports & Delivery",
+    description: "Synchronizing cohort changes down to marketing cloud destinations, CRM endpoints, and object stores.",
+    articleCount: 25,
+    articles: [
+      { title: "PGP-Encrypted Parquet Dumps to Amazon S3", readTime: "6 min" },
+      { title: "High-Throughput Webhooks for Customer.io", readTime: "4 min" },
+      { title: "Automated Slack & Mailgun Digest Formatting", readTime: "3 min" },
+    ],
+  },
+  {
+    id: "MODULE_06",
+    icon: "shield",
+    title: "Governance, RBAC & Security",
+    description: "Enterprise boundary enforcement, cryptographic access tokens, PII sanitization masks, and audit tracks.",
+    articleCount: 11,
+    articles: [
+      { title: "Mandatory 2FA & SAML / Okta SSO Integration", readTime: "5 min" },
+      { title: "SOC-2 Type II & PII Field Masking Best Practices", readTime: "7 min" },
+      { title: "Zero-Downtime API Key Rotation Strategy", readTime: "4 min" },
+    ],
+  },
+];
+
+export const faqItems = [
+  {
+    id: "faq-1",
+    icon: "scatter_plot",
+    question: "Why did my K-Means cluster count automatically shift from k=6 to k=4?",
+    answerParts: [
+      "Segmint executes a continuous silhouette validation test during nocturnal recalculations. If the mean silhouette coefficient across your high-dimensional space drops below the system stability baseline (s < 0.65), the clustering supervisor invokes the Elbow heuristic.",
+      "This automatically merges overlapping centroids with an inter-cluster Euclidean distance under 0.14σ to preserve analytical significance. You can pin a fixed k in Segment Settings → Recalibration Policies → Static Clustered K.",
+    ],
+    defaultOpen: true,
+  },
+  {
+    id: "faq-2",
+    icon: "error_outline",
+    question: "How do I resolve 'E_SCHEMA_TYPE_MISMATCH' errors in the Kafka ingestion pipe?",
+    answerParts: [
+      "This error triggers when incoming Avro or JSON telemetry payloads breach the registered schema contract (e.g., an ISO-8601 string arriving in a field mapped as Unix Epoch timestamp integer).",
+    ],
+    codeSnippet: "$ segmint quarantine inspect --topic=customer-events-stream --error=E_SCHEMA_TYPE_MISMATCH",
+    answerFollowup: "You can inject a live casting transform under Data Sources → Schema Registry or re-route malformed records to your designated Dead Letter Queue (DLQ) without interrupting the stream consumer.",
+    defaultOpen: false,
+  },
+  {
+    id: "faq-3",
+    icon: "alt_route",
+    question: "Can I export segments directly into Salesforce and HubSpot CRM simultaneously?",
+    answerParts: [
+      "Yes. Segmint's Multi-Destination Dispatcher guarantees parallel fan-out replication. When an entity qualifies or churns out of a cohort, webhook dispatchers publish discrete idempotency tokens (X-Segmint-Idempotency-Key) to both CRM connectors concurrently. Field transform rules are applied independently per destination adapter.",
+    ],
+    defaultOpen: false,
+  },
+  {
+    id: "faq-4",
+    icon: "speed",
+    question: "What is the computational latency for real-time rule evaluation?",
+    answerParts: [
+      "Profile qualification rules operate against a distributed in-memory evaluation grid powered by Redis Enterprise and Rust WASM runtimes. The p95 SLA for single-profile rule evaluation upon webhook arrival is 92ms, with full downstream trigger dispatch completed under 320ms globally.",
+    ],
+    defaultOpen: false,
+  },
+];
+
+export const teamRoster = [
+  {
+    name: "Elena Scott (You)",
+    email: "elena@acme.io",
+    role: "Owner",
+    avatarBg: "bg-primary-fixed text-on-primary-fixed",
+    initials: "ES",
+    twoFactorStatus: "Hardware Enforced",
+    verified: true,
+  },
+  {
+    name: "David Vance",
+    email: "d.vance@acme.io",
+    role: "Data Eng",
+    avatarBg: "bg-secondary-fixed text-on-secondary-fixed",
+    initials: "DV",
+    twoFactorStatus: "Active",
+    verified: true,
+  },
+  {
+    name: "Marcus Thorne",
+    email: "m.thorne@acme.io",
+    role: "Growth Analyst",
+    avatarBg: "bg-tertiary-fixed text-on-tertiary-fixed",
+    initials: "MT",
+    twoFactorStatus: "Active",
+    verified: true,
+  },
+  {
+    name: "Sophia Chen",
+    email: "sophia@acme.io",
+    role: "Read-Only",
+    avatarBg: "bg-surface-variant text-on-surface-variant",
+    initials: "SC",
+    twoFactorStatus: "Pending",
+    verified: false,
+  },
+];
+

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { heroMetrics, heroCohorts } from "../../data/landingData";
 
 export default function HeroSection() {
@@ -34,16 +35,16 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
-              <a
+              <Link
                 className="inline-flex items-center justify-center gap-space-xs font-body-medium text-body-medium px-5 py-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all shadow-md hover:shadow-lg"
                 data-path="pricing"
-                href="#pricing"
+                to="/dashboard"
               >
                 <span>Get started for free</span>
                 <span className="material-symbols-outlined text-[18px]">
                   arrow_forward
                 </span>
-              </a>
+              </Link>
               <a
                 className="inline-flex items-center justify-center gap-space-xs font-body-medium text-body-medium px-5 py-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm"
                 href="#product-showcase"
