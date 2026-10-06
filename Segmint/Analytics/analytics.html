@@ -1,0 +1,1875 @@
+<!-- @format -->
+
+<!doctype html>
+
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    /><meta content="web_dashboard" name="shell-type" /><link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    /><link
+      href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/style.css"
+      rel="stylesheet"
+    /><link
+      href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    /><style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }</style
+    ><script src="https://cdn.tailwindcss.com"></script
+    ><script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              error: "#ba1a1a",
+              "inverse-surface": "#273044",
+              "surface-container-highest": "#d9e2fc",
+              "on-tertiary-fixed": "#002113",
+              "secondary-fixed": "#dce1ff",
+              "on-secondary-container": "#002a84",
+              "inverse-primary": "#b8c4ff",
+              "surface-tint": "#154ceb",
+              "tertiary-container": "#017e54",
+              "secondary-fixed-dim": "#b6c4ff",
+              "on-tertiary": "#ffffff",
+              "on-background": "#121b2e",
+              "inverse-on-surface": "#edf0ff",
+              outline: "#747687",
+              tertiary: "#006341",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d1daf4",
+              "on-surface": "#121b2e",
+              "on-secondary-fixed": "#00164f",
+              "surface-container-high": "#e1e8ff",
+              "secondary-container": "#7896fe",
+              "primary-fixed": "#dde1ff",
+              "surface-container": "#e9edff",
+              "tertiary-fixed": "#93f6c3",
+              "on-surface-variant": "#434656",
+              "surface-container-low": "#f1f3ff",
+              "on-tertiary-fixed-variant": "#005235",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#173ea3",
+              "on-tertiary-container": "#c5ffdc",
+              primary: "#0042df",
+              "on-primary-fixed": "#001354",
+              "on-primary-container": "#f1f1ff",
+              "primary-container": "#315efb",
+              "error-container": "#ffdad6",
+              "surface-variant": "#d9e2fc",
+              "on-error": "#ffffff",
+              "outline-variant": "#c4c5d8",
+              "surface-bright": "#f9f9ff",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#b8c4ff",
+              "on-primary-fixed-variant": "#0036bb",
+              "on-primary": "#ffffff",
+              secondary: "#3657bc",
+              surface: "#f9f9ff",
+              "tertiary-fixed-dim": "#77daa8",
+              background: "#f9f9ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "gutter-lg": "2rem",
+              "margin-mobile": "1rem",
+              "space-sm": "0.5rem",
+              margin: "2rem",
+              "space-md": "0.75rem",
+              "space-xl": "2rem",
+              gutter: "1.5rem",
+              "space-lg": "1.25rem",
+              "space-xs": "0.25rem",
+              "gutter-sm": "1rem",
+            },
+            fontFamily: {
+              "display-hero-mobile": ["Geist"],
+              subtitle: ["Geist"],
+              "code-inline": ["JetBrains Mono"],
+              "headline-md": ["Geist"],
+              "display-hero": ["Geist"],
+              "headline-lg-mobile": ["Geist"],
+              "headline-lg": ["Geist"],
+              "label-sm": ["Geist"],
+              "metric-sm": ["Geist"],
+              "label-xs": ["Geist"],
+              "metric-lg": ["Geist"],
+              "body-medium": ["Geist"],
+              "body-base": ["Geist"],
+            },
+            fontSize: {
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "700",
+                },
+              ],
+              subtitle: [
+                "16px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "code-inline": [
+                "12px",
+                { lineHeight: "16px", fontWeight: "400" },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg-mobile": [
+                "26px",
+                {
+                  lineHeight: "34px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "metric-sm": [
+                "20px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-xs": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "metric-lg": [
+                "32px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-medium": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-base": [
+                "14px",
+                { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+            },
+          },
+        },
+      };
+    </script></head
+  ><body
+    class="bg-surface font-body-base text-body-base text-on-surface antialiased"
+    ><aside
+      class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between"
+      ><div class="flex flex-col flex-1 min-h-0"
+        ><div
+          class="h-14 px-space-md flex items-center justify-between border-b border-outline-variant/20"
+          ><div class="flex items-center gap-space-sm"
+            ><img
+              alt="Segmint Logo"
+              class="h-8 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1W3Tj8EP-FSy1npyK06g-S5qjVyL8Bx9-Zz-m6PYmSMnpcqCKpc1CkvK-P8HTYra75SAvnUnmrK5cFuouN4HJuRtX34j7VY5TQCGtZE2klsW-S1CIWi9i6yAkwVSlQVEn5pgjIFnzU9qUQWh5S0o7qYuXgXk8BtZzETQLIuNrfeqLfR3Wqy-e_zF208pJMazjAf-mZkJ2MgprQNZOcJMuxNOW6aXrglRUOAsD2z3gz62-HuavuSXSLNQ"
+            /><span
+              class="font-headline-md text-headline-md tracking-tight text-on-surface"
+              >Segmint</span
+            ><span
+              class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-primary font-label-xs text-label-xs"
+              >v2.4</span
+            ></div
+          ></div
+        ><div class="px-space-sm py-space-sm"
+          ><button
+            class="w-full flex items-center justify-between px-space-sm py-1.5 rounded-lg border border-outline-variant/30 bg-surface-container-low hover:bg-surface-container transition-colors text-left"
+            ><div class="flex items-center gap-space-xs truncate"
+              ><span class="w-2 h-2 rounded-full bg-tertiary"></span
+              ><span
+                class="font-body-medium text-body-medium text-on-surface truncate"
+                >Acme Corp</span
+              ><span class="text-on-surface-variant font-label-xs text-label-xs"
+                >/ Prod</span
+              ></div
+            ><span
+              class="material-symbols-outlined text-[18px] text-on-surface-variant"
+              >unfold_more</span
+            ></button
+          ></div
+        ><div class="px-space-sm py-space-xs"
+          ><div
+            class="px-space-xs pb-1 font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider"
+            >Workspace</div
+          ><nav
+            class="flex flex-col gap-0.5"
+            data-active-classes="bg-surface-container text-primary font-body-medium rounded-lg shadow-sm border-l-2 border-primary"
+            ><a
+              class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+              data-path="overview"
+              href="#"
+              >Overview</a
+            ><a
+              class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+              data-path="customers"
+              href="#"
+              >Customers</a
+            ><a
+              class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+              data-path="segments"
+              href="#"
+              >Segments</a
+            ><a
+              class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+              data-path="analytics"
+              href="#"
+              >Analytics</a
+            ><a
+              class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+              data-path="insights"
+              href="#"
+              >Insights</a
+            ><a
+              class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+              data-path="reports"
+              href="#"
+              >Reports</a
+            ><a
+              class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+              data-path="data-sources"
+              href="#"
+              >Data Sources</a
+            ><a
+              class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+              data-path="settings"
+              href="#"
+              >Settings</a
+            ></nav
+          ></div
+        ></div
+      ><div
+        class="p-space-sm border-t border-outline-variant/20 flex flex-col gap-space-xs"
+        ><a
+          class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-base text-body-base"
+          data-path="help-center"
+          href="#"
+          >Help Center</a
+        ><div
+          class="flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container-low transition-colors"
+          ><div class="flex items-center gap-space-sm"
+            ><div
+              class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-body-medium text-body-medium text-xs font-semibold"
+              >ES</div
+            ><div class="flex flex-col min-w-0"
+              ><span
+                class="font-body-medium text-body-medium text-on-surface leading-tight truncate text-xs"
+                >Elena Scott</span
+              ><span
+                class="font-label-xs text-label-xs text-on-surface-variant leading-tight truncate"
+                >elena@acme.io</span
+              ></div
+            ></div
+          ><span
+            class="w-2 h-2 rounded-full bg-tertiary"
+          ></span></div></div></aside
+    ><div class="pl-64 flex flex-col min-h-screen"
+      ><header
+        class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between"
+        ><div class="flex items-center gap-space-sm"
+          ><div
+            class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant"
+            ><span class="text-on-surface font-body-medium text-body-medium"
+              >Workspace:</span
+            ><span>Production</span><span class="text-outline-variant">/</span
+            ><span>US-East</span></div
+          ><span
+            class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary font-label-xs text-label-xs"
+            ><span
+              class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"
+            ></span
+            >Live Sync Active (2m ago)</span
+          ></div
+        ><div class="flex items-center gap-space-sm"
+          ><button
+            class="h-9 px-space-sm rounded-lg border border-outline-variant/30 bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-body-medium text-body-medium flex items-center gap-space-xs text-xs"
+            ><span
+              class="material-symbols-outlined text-[16px] text-on-surface-variant"
+              >calendar_today</span
+            >Last 30 Days<span
+              class="material-symbols-outlined text-[16px] text-on-surface-variant"
+              >expand_more</span
+            ></button
+          ><button
+            class="h-9 px-space-sm rounded-lg border border-outline-variant/30 bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-2"
+            ><span class="material-symbols-outlined text-[16px]">search</span
+            ><span
+              class="font-code-inline text-code-inline text-[11px] bg-surface-container-lowest px-1 py-0.5 rounded border border-outline-variant/30"
+              >⌘K</span
+            ></button
+          ><button
+            class="relative w-9 h-9 rounded-lg border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+            ><span class="material-symbols-outlined text-[18px]"
+              >notifications</span
+            ><span
+              class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary"
+            ></span></button
+          ><button
+            class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary-container font-body-medium text-body-medium hover:opacity-90 transition-opacity flex items-center gap-1 text-xs"
+            ><span class="material-symbols-outlined text-[16px]">ios_share</span
+            >Export Data</button
+          ><div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"
+            ><span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            ></div
+          ></div
+        ></header
+      ><main
+        class="relative pt-14 w-full px-space-lg py-space-lg flex-1 bg-surface"
+        ><div class="flex flex-col w-full gap-space-lg">
+          <!-- Active Sidebar Script Indicator -->
+          <script>
+            (function activateNav() {
+              const links = document.querySelectorAll("aside nav a");
+              links.forEach((link) => {
+                if (
+                  link.getAttribute("data-path") === "analytics" ||
+                  link.textContent.trim() === "Analytics"
+                ) {
+                  link.className =
+                    "flex items-center px-space-sm py-2 rounded-lg bg-surface-container text-primary font-body-medium rounded-lg shadow-sm";
+                }
+              });
+            })();
+          </script>
+          <!-- Section: Header, Breadcrumbs & Global Metric Filters -->
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm"
+          >
+            <div class="flex flex-col gap-space-xs">
+              <div
+                class="flex items-center gap-space-xs font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider"
+              >
+                <span>Workspaces</span>
+                <span class="material-symbols-outlined text-[12px] text-outline"
+                  >chevron_right</span
+                >
+                <span>Acme Corp</span>
+                <span class="material-symbols-outlined text-[12px] text-outline"
+                  >chevron_right</span
+                >
+                <span class="text-primary font-semibold"
+                  >Analytics &amp; Retention Metrics</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <h1
+                  class="font-headline-lg text-headline-lg text-on-surface tracking-tight"
+                  >Analytics &amp; Cohort Telemetry</h1
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-code-inline text-[11px] tracking-normal"
+                  >LIVE_ENGINE v4.11</span
+                >
+              </div>
+              <p
+                class="font-subtitle text-subtitle text-on-surface-variant max-w-4xl"
+              >
+                Multi-dimensional behavioral analytics, cohort retention curves,
+                cluster drift velocity, and feature correlation matrix.
+              </p>
+            </div>
+            <!-- Filter & Action Controls -->
+            <div
+              class="flex flex-wrap items-center gap-space-sm self-start md:self-end"
+            >
+              <!-- Cohort Granularity Selector -->
+              <div
+                class="flex items-center p-1 bg-surface-container-low rounded-lg shadow-sm"
+              >
+                <button
+                  class="px-3 py-1 text-xs font-body-medium rounded text-on-surface-variant hover:text-on-surface transition-all"
+                  id="btn-weekly"
+                  onclick="switchGranularity('weekly')"
+                  >Weekly</button
+                >
+                <button
+                  class="px-3 py-1 text-xs font-body-medium rounded bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all"
+                  id="btn-monthly"
+                  onclick="switchGranularity('monthly')"
+                  >Monthly</button
+                >
+              </div>
+              <!-- Segment Selector Filter -->
+              <div class="relative">
+                <select
+                  class="appearance-none bg-surface-container-lowest text-on-surface font-body-medium text-body-medium text-xs px-3 py-2 pr-8 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer"
+                >
+                  <option value="all">All Segments (28.4k)</option>
+                  <option value="advocates">High-LTV Advocates (6.4k)</option>
+                  <option value="loyalists">Steady Loyalists (12.1k)</option>
+                  <option value="seasonal">Seasonal Shoppers (7.2k)</option>
+                  <option value="churn">Churn Risk Dormant (2.7k)</option>
+                </select>
+                <span
+                  class="material-symbols-outlined text-[16px] text-outline absolute right-2 top-2.5 pointer-events-none"
+                  >unfold_more</span
+                >
+              </div>
+              <!-- Timeframe Switcher -->
+              <div class="relative">
+                <select
+                  class="appearance-none bg-surface-container-lowest text-on-surface font-body-medium text-body-medium text-xs px-3 py-2 pr-8 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer"
+                >
+                  <option>Last 30 Days</option>
+                  <option selected="">Last 90 Days</option>
+                  <option>Year to Date (YTD)</option>
+                  <option>Trailing 12 Months</option>
+                </select>
+                <span
+                  class="material-symbols-outlined text-[16px] text-outline absolute right-2 top-2.5 pointer-events-none"
+                  >calendar_view_day</span
+                >
+              </div>
+              <button
+                class="h-9 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-medium text-xs shadow-sm flex items-center gap-1.5 transition-colors"
+              >
+                <span class="material-symbols-outlined text-[16px] text-primary"
+                  >function</span
+                >
+                <span>Formula +</span>
+              </button>
+              <button
+                class="h-9 px-3.5 rounded-lg bg-primary text-on-primary font-body-medium text-xs hover:bg-primary-container shadow-sm flex items-center gap-1.5 transition-colors"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >file_download</span
+                >
+                <span>Export Cohort CSV</span>
+              </button>
+            </div>
+          </div>
+          <!-- Section 1: KPI Performance Overview Strip (4 High-Density Precision Cards) -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md"
+          >
+            <!-- Card 1: NDR -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl pointer-events-none"
+              ></div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-semibold"
+                  >Net Cohort NDR</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed-variant font-label-xs text-[10px] font-semibold"
+                  >Upper Quartile</span
+                >
+              </div>
+              <div class="my-space-xs flex items-baseline gap-2">
+                <span
+                  class="font-metric-lg text-metric-lg text-on-surface tracking-tight"
+                  >118.4%</span
+                >
+                <span
+                  class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >arrow_upward</span
+                  >+4.2%
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] pt-1"
+              >
+                <span>MoM Cohort Expansion</span>
+                <span class="font-code-inline text-[10px] text-outline"
+                  >Target: &gt;115%</span
+                >
+              </div>
+            </div>
+            <!-- Card 2: 90-Day Retention -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-semibold"
+                  >90-Day Retention</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-xs text-[10px] font-semibold"
+                  >Cohort M3</span
+                >
+              </div>
+              <div class="my-space-xs flex items-baseline gap-2">
+                <span
+                  class="font-metric-lg text-metric-lg text-on-surface tracking-tight"
+                  >76.2%</span
+                >
+                <span
+                  class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >arrow_upward</span
+                  >+2.8%
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] pt-1"
+              >
+                <span>vs Prior Rolling Window</span>
+                <span class="font-code-inline text-[10px] text-outline"
+                  >Benchmark: 70%</span
+                >
+              </div>
+            </div>
+            <!-- Card 3: Velocity to Core Adoption -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-semibold"
+                  >Avg Velocity to Adoption</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-xs text-[10px] font-semibold"
+                  >TTV Index</span
+                >
+              </div>
+              <div class="my-space-xs flex items-baseline gap-2">
+                <span
+                  class="font-metric-lg text-metric-lg text-on-surface tracking-tight"
+                  >4.8 Days</span
+                >
+                <span
+                  class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >trending_down</span
+                  >-1.2d
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] pt-1"
+              >
+                <span>Faster telemetry pipeline</span>
+                <span class="font-code-inline text-[10px] text-tertiary"
+                  >Optimal</span
+                >
+              </div>
+            </div>
+            <!-- Card 4: Cluster Migration Volatility -->
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-semibold"
+                  >Cluster Drift Volatility</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-xs text-[10px] font-semibold"
+                  >Stable (σ 0.12)</span
+                >
+              </div>
+              <div class="my-space-xs flex items-baseline gap-2">
+                <span
+                  class="font-metric-lg text-metric-lg text-on-surface tracking-tight"
+                  >6.1%</span
+                >
+                <span
+                  class="font-label-sm text-label-sm text-secondary font-semibold flex items-center"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >check</span
+                  >Balanced
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] pt-1"
+              >
+                <span>Low inter-cluster turbulence</span>
+                <span class="font-code-inline text-[10px] text-outline"
+                  >Max: 12%</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Section 2: Main Analytical Visualizations (2-Column Asymmetric Layout) -->
+          <div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+            <!-- Primary Panel: Interactive Cohort Retention Heatmap Matrix (7 cols) -->
+            <div
+              class="xl:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-space-sm">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <h2
+                        class="font-headline-md text-headline-md text-on-surface tracking-tight text-lg"
+                        >Cohort Retention Matrix</h2
+                      >
+                      <span
+                        class="font-code-inline text-code-inline text-[11px] px-2 py-0.5 rounded bg-surface-container text-primary font-medium"
+                        >Monthly Active (%)</span
+                      >
+                    </div>
+                    <p
+                      class="font-body-base text-body-base text-on-surface-variant text-xs mt-0.5"
+                    >
+                      Percentage of workspace accounts maintaining active
+                      telemetry sync per elapsed billing cycle.
+                    </p>
+                  </div>
+                  <!-- Heatmap Legend -->
+                  <div
+                    class="flex items-center gap-1.5 text-[11px] font-label-xs text-on-surface-variant"
+                  >
+                    <span>&lt;40%</span>
+                    <div class="flex h-2.5 w-20 rounded overflow-hidden">
+                      <div class="h-full w-1/5 bg-primary/20"></div>
+                      <div class="h-full w-1/5 bg-primary/40"></div>
+                      <div class="h-full w-1/5 bg-primary/60"></div>
+                      <div class="h-full w-1/5 bg-primary/80"></div>
+                      <div class="h-full w-1/5 bg-primary"></div>
+                    </div>
+                    <span>100%</span>
+                  </div>
+                </div>
+                <!-- Heatmap Table Container -->
+                <div class="overflow-x-auto w-full mt-space-md">
+                  <table
+                    class="w-full text-left font-body-base text-body-base text-xs"
+                  >
+                    <thead>
+                      <tr
+                        class="bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider"
+                      >
+                        <th class="py-2.5 px-3 rounded-l">Cohort</th>
+                        <th class="py-2.5 px-3 text-right">Size</th>
+                        <th class="py-2.5 px-3 text-center">M0</th>
+                        <th class="py-2.5 px-3 text-center">M1</th>
+                        <th class="py-2.5 px-3 text-center">M2</th>
+                        <th class="py-2.5 px-3 text-center">M3</th>
+                        <th class="py-2.5 px-3 text-center">M4</th>
+                        <th class="py-2.5 px-3 text-center rounded-r">M5</th>
+                      </tr>
+                    </thead>
+                    <tbody class="font-code-inline text-[12px] divide-y-0">
+                      <!-- Nov 2024 -->
+                      <tr
+                        class="hover:bg-surface-container-low/60 transition-colors"
+                      >
+                        <td
+                          class="py-2 px-3 font-body-medium text-on-surface font-semibold"
+                          >Nov 2024</td
+                        >
+                        <td class="py-2 px-3 text-right text-on-surface-variant"
+                          >3,820</td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary text-on-primary font-medium"
+                            >100%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/85 text-on-primary font-medium"
+                            >88%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/75 text-on-primary font-medium"
+                            >82%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/70 text-on-primary font-medium"
+                            >79%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/65 text-on-primary font-medium"
+                            >76%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/60 text-on-primary font-medium"
+                            >74%</span
+                          ></td
+                        >
+                      </tr>
+                      <!-- Dec 2024 -->
+                      <tr
+                        class="hover:bg-surface-container-low/60 transition-colors"
+                      >
+                        <td
+                          class="py-2 px-3 font-body-medium text-on-surface font-semibold"
+                          >Dec 2024</td
+                        >
+                        <td class="py-2 px-3 text-right text-on-surface-variant"
+                          >4,150</td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary text-on-primary font-medium"
+                            >100%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/90 text-on-primary font-medium"
+                            >91%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/80 text-on-primary font-medium"
+                            >84%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/75 text-on-primary font-medium"
+                            >81%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/70 text-on-primary font-medium"
+                            >77%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                      </tr>
+                      <!-- Jan 2025 -->
+                      <tr
+                        class="hover:bg-surface-container-low/60 transition-colors"
+                      >
+                        <td
+                          class="py-2 px-3 font-body-medium text-on-surface font-semibold"
+                          >Jan 2025</td
+                        >
+                        <td class="py-2 px-3 text-right text-on-surface-variant"
+                          >4,600</td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary text-on-primary font-medium"
+                            >100%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/85 text-on-primary font-medium"
+                            >89%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/80 text-on-primary font-medium"
+                            >83%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/75 text-on-primary font-medium"
+                            >80%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                      </tr>
+                      <!-- Feb 2025 -->
+                      <tr
+                        class="hover:bg-surface-container-low/60 transition-colors"
+                      >
+                        <td
+                          class="py-2 px-3 font-body-medium text-on-surface font-semibold"
+                          >Feb 2025</td
+                        >
+                        <td class="py-2 px-3 text-right text-on-surface-variant"
+                          >5,020</td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary text-on-primary font-medium"
+                            >100%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/90 text-on-primary font-medium"
+                            >93%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/85 text-on-primary font-medium"
+                            >86%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                      </tr>
+                      <!-- Mar 2025 -->
+                      <tr
+                        class="hover:bg-surface-container-low/60 transition-colors"
+                      >
+                        <td
+                          class="py-2 px-3 font-body-medium text-on-surface font-semibold"
+                          >Mar 2025</td
+                        >
+                        <td class="py-2 px-3 text-right text-on-surface-variant"
+                          >5,410</td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary text-on-primary font-medium"
+                            >100%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary/90 text-on-primary font-medium"
+                            >92%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                      </tr>
+                      <!-- Apr 2025 (Current) -->
+                      <tr
+                        class="hover:bg-surface-container-low/60 transition-colors"
+                      >
+                        <td
+                          class="py-2 px-3 font-body-medium text-on-surface font-semibold flex items-center gap-1.5"
+                        >
+                          Apr 2025
+                          <span
+                            class="w-1.5 h-1.5 rounded-full bg-tertiary"
+                          ></span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-on-surface-variant"
+                          >6,120</td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-primary text-on-primary font-medium"
+                            >100%</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                        <td class="py-2 px-1 text-center"
+                          ><span
+                            class="inline-block w-full py-1 rounded bg-surface-container-low text-outline"
+                            >-</span
+                          ></td
+                        >
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div
+                class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <span
+                    class="material-symbols-outlined text-[18px] text-primary"
+                    >insights</span
+                  >
+                  <span
+                    class="font-body-medium text-body-medium text-xs text-on-surface"
+                    >Retention inflection stabilizes at Month 3 across 94% of
+                    enterprise tiers.</span
+                  >
+                </div>
+                <span
+                  class="font-code-inline text-[11px] text-tertiary font-semibold"
+                  >Degradation Plateau: ~74.2%</span
+                >
+              </div>
+            </div>
+            <!-- Secondary Panel: Predictive LTV & Trajectory by Cluster (5 cols) -->
+            <div
+              class="xl:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <div>
+                    <h2
+                      class="font-headline-md text-headline-md text-on-surface tracking-tight text-lg"
+                      >Predictive LTV Trajectory</h2
+                    >
+                    <p
+                      class="font-body-base text-body-base text-on-surface-variant text-xs mt-0.5"
+                    >
+                      12-Month revenue compounding projections mapped by cluster
+                      segment.
+                    </p>
+                  </div>
+                  <span
+                    class="font-code-inline text-[11px] px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold"
+                    >p &lt; 0.001</span
+                  >
+                </div>
+                <!-- SVG Line Chart (Clean, precise, under 2KB) -->
+                <div class="w-full mt-space-md">
+                  <svg
+                    class="w-full h-44 overflow-visible"
+                    fill="none"
+                    viewbox="0 0 440 180"
+                  >
+                    <!-- Grid Lines -->
+                    <line
+                      stroke="#e9edff"
+                      stroke-width="1"
+                      x1="0"
+                      x2="440"
+                      y1="30"
+                      y2="30"
+                    ></line>
+                    <line
+                      stroke="#e9edff"
+                      stroke-width="1"
+                      x1="0"
+                      x2="440"
+                      y1="75"
+                      y2="75"
+                    ></line>
+                    <line
+                      stroke="#e9edff"
+                      stroke-width="1"
+                      x1="0"
+                      x2="440"
+                      y1="120"
+                      y2="120"
+                    ></line>
+                    <line
+                      stroke="#e9edff"
+                      stroke-width="1"
+                      x1="0"
+                      x2="440"
+                      y1="165"
+                      y2="165"
+                    ></line>
+                    <!-- Benchmark Target Dotted Line -->
+                    <line
+                      opacity="0.6"
+                      stroke="#747687"
+                      stroke-dasharray="4 4"
+                      stroke-width="1.2"
+                      x1="0"
+                      x2="440"
+                      y1="65"
+                      y2="65"
+                    ></line>
+                    <text
+                      fill="#747687"
+                      font-family="Geist"
+                      font-size="9"
+                      x="350"
+                      y="60"
+                    >
+                      Target $16.5k
+                    </text>
+                    <!-- Curve 1: High-LTV Advocates (Primary #0042df) -->
+                    <path
+                      d="M 0,160 C 90,145 180,95 270,55 C 340,25 390,18 440,12"
+                      stroke="#0042df"
+                      stroke-width="2.5"
+                    ></path>
+                    <circle cx="440" cy="12" fill="#0042df" r="3.5"></circle>
+                    <!-- Curve 2: Steady Loyalists (Secondary #3657bc) -->
+                    <path
+                      d="M 0,165 C 100,155 190,130 280,105 C 360,82 400,72 440,68"
+                      stroke="#3657bc"
+                      stroke-width="2"
+                    ></path>
+                    <circle cx="440" cy="68" fill="#3657bc" r="3"></circle>
+                    <!-- Curve 3: Seasonal Shoppers (Tertiary #006341) -->
+                    <path
+                      d="M 0,170 C 110,168 200,150 280,140 C 360,130 400,122 440,118"
+                      stroke="#006341"
+                      stroke-width="2"
+                    ></path>
+                    <circle cx="440" cy="118" fill="#006341" r="3"></circle>
+                    <!-- Curve 4: Churn Risk Dormant (Error #ba1a1a) -->
+                    <path
+                      d="M 0,170 C 110,170 200,168 290,165 C 370,162 410,160 440,158"
+                      stroke="#ba1a1a"
+                      stroke-dasharray="2 2"
+                      stroke-width="1.5"
+                    ></path>
+                    <circle cx="440" cy="158" fill="#ba1a1a" r="2.5"></circle>
+                  </svg>
+                </div>
+                <!-- Metric Cluster Breakdown Grid -->
+                <div
+                  class="grid grid-cols-2 gap-space-xs mt-space-sm pt-space-xs"
+                >
+                  <!-- Cluster 1 -->
+                  <div
+                    class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                      <span class="font-body-medium text-xs text-on-surface"
+                        >Advocates</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-xs font-semibold text-primary"
+                      >$24.8k</span
+                    >
+                  </div>
+                  <!-- Cluster 2 -->
+                  <div
+                    class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-secondary"
+                      ></span>
+                      <span class="font-body-medium text-xs text-on-surface"
+                        >Loyalists</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-xs font-semibold text-secondary"
+                      >$14.2k</span
+                    >
+                  </div>
+                  <!-- Cluster 3 -->
+                  <div
+                    class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+                      <span class="font-body-medium text-xs text-on-surface"
+                        >Seasonal</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-xs font-semibold text-tertiary"
+                      >$6.5k</span
+                    >
+                  </div>
+                  <!-- Cluster 4 -->
+                  <div
+                    class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+                      <span class="font-body-medium text-xs text-on-surface"
+                        >Dormant</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-xs font-semibold text-error"
+                      >$1.8k</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between pt-space-sm text-xs text-on-surface-variant font-label-xs"
+              >
+                <span class="flex items-center gap-1"
+                  ><span
+                    class="material-symbols-outlined text-[14px] text-tertiary"
+                    >verified</span
+                  >
+                  Monte-Carlo Convergence: 99.4%</span
+                >
+                <button
+                  class="text-primary hover:underline font-semibold flex items-center"
+                  >Cluster breakdown →</button
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Section 3: Behavioral Correlation & Feature Impact Matrix (Interactive Precision Grid) -->
+          <div
+            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md"
+            >
+              <div>
+                <div class="flex items-center gap-2">
+                  <h2
+                    class="font-headline-md text-headline-md text-on-surface tracking-tight text-lg"
+                    >Behavioral Correlation &amp; Feature Impact Matrix</h2
+                  >
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-[10px] font-semibold"
+                    >ML Engine v2</span
+                  >
+                </div>
+                <p
+                  class="font-body-base text-body-base text-on-surface-variant text-xs mt-0.5"
+                >
+                  Deterministic correlation between specific behavioral hooks,
+                  retention multiplier, and customer lifespan expansion.
+                </p>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider"
+                  >Sort By:</span
+                >
+                <select
+                  class="text-xs bg-surface-container-low text-on-surface font-body-medium px-2.5 py-1.5 rounded-lg focus:outline-none cursor-pointer"
+                >
+                  <option>Pearson Correlation (Desc)</option>
+                  <option>Retention Multiplier (High to Low)</option>
+                  <option>Feature Penetration</option>
+                </select>
+              </div>
+            </div>
+            <!-- Data Table -->
+            <div class="overflow-x-auto w-full">
+              <table
+                class="w-full text-left font-body-base text-body-base text-xs"
+              >
+                <thead>
+                  <tr
+                    class="bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider"
+                  >
+                    <th class="py-2.5 px-4 rounded-l"
+                      >In-App Feature / Behavioral Milestone</th
+                    >
+                    <th class="py-2.5 px-3">Penetration</th>
+                    <th class="py-2.5 px-3 text-center">Pearson (r)</th>
+                    <th class="py-2.5 px-3">Retention Impact</th>
+                    <th class="py-2.5 px-3">Primary Cohort Lift</th>
+                    <th class="py-2.5 px-4 text-right rounded-r">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-surface-container">
+                  <!-- Row 1 -->
+                  <tr
+                    class="hover:bg-surface-container-low/50 transition-colors"
+                  >
+                    <td class="py-3 px-4">
+                      <div class="flex items-center gap-2.5">
+                        <div
+                          class="w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center"
+                        >
+                          <span class="material-symbols-outlined text-[16px]"
+                            >cloud_sync</span
+                          >
+                        </div>
+                        <div>
+                          <div
+                            class="font-body-medium text-on-surface font-semibold"
+                            >Scheduled S3 / Snowflake Exports</div
+                          >
+                          <div
+                            class="font-label-xs text-[11px] text-on-surface-variant"
+                            >Automated warehouse syncing pipeline active</div
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-3">
+                      <div class="w-32">
+                        <div
+                          class="flex justify-between text-[11px] font-code-inline mb-1"
+                        >
+                          <span>64.8%</span>
+                          <span class="text-outline">18.4k accts</span>
+                        </div>
+                        <div
+                          class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"
+                        >
+                          <div
+                            class="bg-primary h-full rounded-full"
+                            style="width: 64.8%"
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-3 text-center">
+                      <span
+                        class="font-code-inline text-xs font-semibold px-2 py-0.5 rounded bg-tertiary-fixed/30 text-tertiary"
+                        >r = +0.82</span
+                      >
+                    </td>
+                    <td class="py-3 px-3">
+                      <span
+                        class="font-body-medium text-xs text-tertiary font-semibold flex items-center gap-1"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >trending_up</span
+                        >+3.4x Retention Multiplier
+                      </span>
+                    </td>
+                    <td class="py-3 px-3">
+                      <span
+                        class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-xs text-[11px]"
+                        >Advocates (+42%)</span
+                      >
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <button
+                        class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-body-medium text-xs transition-colors inline-flex items-center gap-1"
+                      >
+                        <span>Create Segment</span>
+                        <span class="material-symbols-outlined text-[14px]"
+                          >arrow_forward</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 2 -->
+                  <tr
+                    class="hover:bg-surface-container-low/50 transition-colors"
+                  >
+                    <td class="py-3 px-4">
+                      <div class="flex items-center gap-2.5">
+                        <div
+                          class="w-7 h-7 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center"
+                        >
+                          <span class="material-symbols-outlined text-[16px]"
+                            >rule</span
+                          >
+                        </div>
+                        <div>
+                          <div
+                            class="font-body-medium text-on-surface font-semibold"
+                            >Custom Dynamic Rules &gt;= 3</div
+                          >
+                          <div
+                            class="font-label-xs text-[11px] text-on-surface-variant"
+                            >Complex composite logic enabled in workspace</div
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-3">
+                      <div class="w-32">
+                        <div
+                          class="flex justify-between text-[11px] font-code-inline mb-1"
+                        >
+                          <span>42.1%</span>
+                          <span class="text-outline">11.9k accts</span>
+                        </div>
+                        <div
+                          class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"
+                        >
+                          <div
+                            class="bg-secondary h-full rounded-full"
+                            style="width: 42.1%"
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-3 text-center">
+                      <span
+                        class="font-code-inline text-xs font-semibold px-2 py-0.5 rounded bg-tertiary-fixed/30 text-tertiary"
+                        >r = +0.74</span
+                      >
+                    </td>
+                    <td class="py-3 px-3">
+                      <span
+                        class="font-body-medium text-xs text-tertiary font-semibold flex items-center gap-1"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >trending_up</span
+                        >+2.9x Retention Multiplier
+                      </span>
+                    </td>
+                    <td class="py-3 px-3">
+                      <span
+                        class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-xs text-[11px]"
+                        >Loyalists (+31%)</span
+                      >
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <button
+                        class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-body-medium text-xs transition-colors inline-flex items-center gap-1"
+                      >
+                        <span>Create Segment</span>
+                        <span class="material-symbols-outlined text-[14px]"
+                          >arrow_forward</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 3 -->
+                  <tr
+                    class="hover:bg-surface-container-low/50 transition-colors"
+                  >
+                    <td class="py-3 px-4">
+                      <div class="flex items-center gap-2.5">
+                        <div
+                          class="w-7 h-7 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center"
+                        >
+                          <span class="material-symbols-outlined text-[16px]"
+                            >webhook</span
+                          >
+                        </div>
+                        <div>
+                          <div
+                            class="font-body-medium text-on-surface font-semibold"
+                            >API Key Telemetry Webhook Active</div
+                          >
+                          <div
+                            class="font-label-xs text-[11px] text-on-surface-variant"
+                            >Real-time segment ingress listeners subscribed</div
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-3">
+                      <div class="w-32">
+                        <div
+                          class="flex justify-between text-[11px] font-code-inline mb-1"
+                        >
+                          <span>31.5%</span>
+                          <span class="text-outline">8.9k accts</span>
+                        </div>
+                        <div
+                          class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"
+                        >
+                          <div
+                            class="bg-tertiary h-full rounded-full"
+                            style="width: 31.5%"
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-3 text-center">
+                      <span
+                        class="font-code-inline text-xs font-semibold px-2 py-0.5 rounded bg-tertiary-fixed/30 text-tertiary"
+                        >r = +0.68</span
+                      >
+                    </td>
+                    <td class="py-3 px-3">
+                      <span
+                        class="font-body-medium text-xs text-primary font-semibold flex items-center gap-1"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >bolt</span
+                        >+2.1x Expansion Likelihood
+                      </span>
+                    </td>
+                    <td class="py-3 px-3">
+                      <span
+                        class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-xs text-[11px]"
+                        >Advocates (+68%)</span
+                      >
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <button
+                        class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-body-medium text-xs transition-colors inline-flex items-center gap-1"
+                      >
+                        <span>Create Segment</span>
+                        <span class="material-symbols-outlined text-[14px]"
+                          >arrow_forward</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 4: Negative Indicator -->
+                  <tr
+                    class="hover:bg-surface-container-low/50 transition-colors"
+                  >
+                    <td class="py-3 px-4">
+                      <div class="flex items-center gap-2.5">
+                        <div
+                          class="w-7 h-7 rounded-lg bg-error-container text-error flex items-center justify-center"
+                        >
+                          <span class="material-symbols-outlined text-[16px]"
+                            >person_off</span
+                          >
+                        </div>
+                        <div>
+                          <div
+                            class="font-body-medium text-on-surface font-semibold"
+                            >Single User / No Team Members Invited</div
+                          >
+                          <div
+                            class="font-label-xs text-[11px] text-on-surface-variant"
+                            >Isolated single-tenant workspace usage</div
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-3">
+                      <div class="w-32">
+                        <div
+                          class="flex justify-between text-[11px] font-code-inline mb-1"
+                        >
+                          <span>18.2%</span>
+                          <span class="text-outline">5.1k accts</span>
+                        </div>
+                        <div
+                          class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"
+                        >
+                          <div
+                            class="bg-error h-full rounded-full"
+                            style="width: 18.2%"
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-3 text-center">
+                      <span
+                        class="font-code-inline text-xs font-semibold px-2 py-0.5 rounded bg-error-container text-error"
+                        >r = -0.79</span
+                      >
+                    </td>
+                    <td class="py-3 px-3">
+                      <span
+                        class="font-body-medium text-xs text-error font-semibold flex items-center gap-1"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >warning</span
+                        >-4.2x Churn Acceleration
+                      </span>
+                    </td>
+                    <td class="py-3 px-3">
+                      <span
+                        class="px-2 py-0.5 rounded-full bg-error-container/40 text-error font-label-xs text-[11px]"
+                        >Churn Risk (88%)</span
+                      >
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <button
+                        class="px-2.5 py-1.5 rounded-lg bg-error-container/40 hover:bg-error hover:text-on-error text-error font-body-medium text-xs transition-colors inline-flex items-center gap-1"
+                      >
+                        <span>Remediate Cohort</span>
+                        <span class="material-symbols-outlined text-[14px]"
+                          >crisis_alert</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Section 4: Multi-Segment Conversion Funnel & Velocity Tracker (Bottom Span) -->
+          <div
+            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs"
+            >
+              <div>
+                <div class="flex items-center gap-2">
+                  <h2
+                    class="font-headline-md text-headline-md text-on-surface tracking-tight text-lg"
+                    >End-to-End Cluster Lifecycle Funnel &amp; Velocity</h2
+                  >
+                  <span
+                    class="font-code-inline text-[11px] px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-medium"
+                    >Aggregated Trajectory</span
+                  >
+                </div>
+                <p
+                  class="font-body-base text-body-base text-on-surface-variant text-xs mt-0.5"
+                >
+                  Step-by-step conversion efficiency, friction drop-off points,
+                  and median lag time to programmatic account expansion.
+                </p>
+              </div>
+              <div
+                class="flex items-center gap-4 text-xs font-label-xs text-on-surface-variant"
+              >
+                <span class="flex items-center gap-1.5"
+                  ><span class="w-2.5 h-2.5 rounded bg-primary"></span> Complete
+                  Cohort</span
+                >
+                <span class="flex items-center gap-1.5"
+                  ><span
+                    class="w-2.5 h-2.5 rounded bg-surface-container-highest"
+                  ></span>
+                  Drop-off Churn</span
+                >
+              </div>
+            </div>
+            <!-- 5-Stage Funnel Graphic Strip -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm pt-space-xs"
+            >
+              <!-- Stage 1 -->
+              <div
+                class="p-space-sm bg-surface-container-low rounded-lg flex flex-col justify-between relative group hover:bg-surface-container transition-colors"
+              >
+                <div
+                  class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] mb-1"
+                >
+                  <span>01. Ingestion</span>
+                  <span class="font-code-inline font-semibold text-on-surface"
+                    >100%</span
+                  >
+                </div>
+                <div class="font-metric-sm text-metric-sm text-on-surface"
+                  >28,400</div
+                >
+                <div
+                  class="text-[11px] text-on-surface-variant font-body-base mt-1"
+                  >Raw telemetry ingress</div
+                >
+                <div
+                  class="mt-space-sm pt-space-xs flex items-center justify-between font-code-inline text-[10px] text-outline"
+                >
+                  <span>Median: 0.2h</span>
+                  <span class="text-tertiary">Drop: 0%</span>
+                </div>
+                <div
+                  class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden"
+                >
+                  <div class="bg-primary h-full" style="width: 100%"></div>
+                </div>
+              </div>
+              <!-- Stage 2 -->
+              <div
+                class="p-space-sm bg-surface-container-low rounded-lg flex flex-col justify-between relative group hover:bg-surface-container transition-colors"
+              >
+                <div
+                  class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] mb-1"
+                >
+                  <span>02. Cluster Match</span>
+                  <span class="font-code-inline font-semibold text-primary"
+                    >89.4%</span
+                  >
+                </div>
+                <div class="font-metric-sm text-metric-sm text-on-surface"
+                  >25,389</div
+                >
+                <div
+                  class="text-[11px] text-on-surface-variant font-body-base mt-1"
+                  >Algorithmic segmentation</div
+                >
+                <div
+                  class="mt-space-sm pt-space-xs flex items-center justify-between font-code-inline text-[10px] text-outline"
+                >
+                  <span>Median: 1.4d</span>
+                  <span class="text-error">-10.6%</span>
+                </div>
+                <div
+                  class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden"
+                >
+                  <div class="bg-primary h-full" style="width: 89.4%"></div>
+                </div>
+              </div>
+              <!-- Stage 3 -->
+              <div
+                class="p-space-sm bg-surface-container-low rounded-lg flex flex-col justify-between relative group hover:bg-surface-container transition-colors"
+              >
+                <div
+                  class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] mb-1"
+                >
+                  <span>03. Active Filter</span>
+                  <span class="font-code-inline font-semibold text-primary"
+                    >72.1%</span
+                  >
+                </div>
+                <div class="font-metric-sm text-metric-sm text-on-surface"
+                  >20,476</div
+                >
+                <div
+                  class="text-[11px] text-on-surface-variant font-body-base mt-1"
+                  >Rule built &amp; executed</div
+                >
+                <div
+                  class="mt-space-sm pt-space-xs flex items-center justify-between font-code-inline text-[10px] text-outline"
+                >
+                  <span>Median: 3.1d</span>
+                  <span class="text-error">-17.3%</span>
+                </div>
+                <div
+                  class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden"
+                >
+                  <div class="bg-primary h-full" style="width: 72.1%"></div>
+                </div>
+              </div>
+              <!-- Stage 4 -->
+              <div
+                class="p-space-sm bg-surface-container-low rounded-lg flex flex-col justify-between relative group hover:bg-surface-container transition-colors"
+              >
+                <div
+                  class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] mb-1"
+                >
+                  <span>04. Daily Sync</span>
+                  <span class="font-code-inline font-semibold text-primary"
+                    >58.6%</span
+                  >
+                </div>
+                <div class="font-metric-sm text-metric-sm text-on-surface"
+                  >16,642</div
+                >
+                <div
+                  class="text-[11px] text-on-surface-variant font-body-base mt-1"
+                  >Scheduled webhook / ETL</div
+                >
+                <div
+                  class="mt-space-sm pt-space-xs flex items-center justify-between font-code-inline text-[10px] text-outline"
+                >
+                  <span>Median: 7.8d</span>
+                  <span class="text-error">-13.5%</span>
+                </div>
+                <div
+                  class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden"
+                >
+                  <div class="bg-primary h-full" style="width: 58.6%"></div>
+                </div>
+              </div>
+              <!-- Stage 5 -->
+              <div
+                class="p-space-sm bg-surface-container-low rounded-lg flex flex-col justify-between relative group hover:bg-surface-container transition-colors"
+              >
+                <div
+                  class="flex items-center justify-between text-on-surface-variant font-label-xs text-[11px] mb-1"
+                >
+                  <span>05. Expansion</span>
+                  <span class="font-code-inline font-semibold text-tertiary"
+                    >38.2%</span
+                  >
+                </div>
+                <div class="font-metric-sm text-metric-sm text-on-surface"
+                  >10,848</div
+                >
+                <div
+                  class="text-[11px] text-on-surface-variant font-body-base mt-1"
+                  >Seat &amp; tier upgrade event</div
+                >
+                <div
+                  class="mt-space-sm pt-space-xs flex items-center justify-between font-code-inline text-[10px] text-outline"
+                >
+                  <span>Median: 24.5d</span>
+                  <span class="text-tertiary">Target Hit</span>
+                </div>
+                <div
+                  class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden"
+                >
+                  <div class="bg-tertiary h-full" style="width: 38.2%"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Diagnostic Banner -->
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg bg-surface-container text-xs text-on-surface"
+            >
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-primary"
+                  >speed</span
+                >
+                <span class="font-body-medium"
+                  >Funnel diagnostic: Largest friction gap remains between Stage
+                  2 and Stage 3 (-17.3%). Promoting pre-built segment recipes
+                  will accelerate conversion by ~8.4%.</span
+                >
+              </div>
+              <button
+                class="mt-2 sm:mt-0 font-body-medium text-primary hover:underline flex items-center gap-1 self-start sm:self-auto"
+              >
+                <span>Run Automated Experiment</span>
+                <span class="material-symbols-outlined text-[14px]"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Interactive JavaScript Toggle Logic -->
+          <script>
+            function switchGranularity(type) {
+              const btnWeekly = document.getElementById("btn-weekly");
+              const btnMonthly = document.getElementById("btn-monthly");
+
+              if (type === "weekly") {
+                btnWeekly.className =
+                  "px-3 py-1 text-xs font-body-medium rounded bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all";
+                btnMonthly.className =
+                  "px-3 py-1 text-xs font-body-medium rounded text-on-surface-variant hover:text-on-surface transition-all";
+              } else {
+                btnMonthly.className =
+                  "px-3 py-1 text-xs font-body-medium rounded bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all";
+                btnWeekly.className =
+                  "px-3 py-1 text-xs font-body-medium rounded text-on-surface-variant hover:text-on-surface transition-all";
+              }
+            }
+          </script>
+        </div></main
+      ></div
+    ></body
+  ></html
+>
